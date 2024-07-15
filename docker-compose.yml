@@ -1,0 +1,30 @@
+version: '3.8'
+
+services:
+  app:
+    build: .
+    ports:
+      - "5000:5000"
+    volumes:
+      - D:\dev\django_introduction\django_project:/app
+    depends_on:
+      - db
+    tty: true  # インタラクティブなシェルを有効にする
+    stdin_open: true  # 標準入力を開いた状態にする
+    env_file:  # コンテナ内の環境変数を.envを使って設定
+      - .env
+  db:
+    image: postgres
+    volumes:
+      - ./db_data:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+    tty: true  # インタラクティブなシェルを有効にする
+    stdin_open: true  # 標準入力を開いた状態にする
+    env_file:  # コンテナ内の環境変数を.envを使って設定
+      - .env
+
+volumes:
+  db_data:
+
+    

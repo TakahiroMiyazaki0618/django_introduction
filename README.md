@@ -7,3 +7,8 @@
 - python manage.py startapp diary
 - python3 manage.py runserver 0:5000
 - http://localhost:5000/
+
+### 参照サイト
+- https://docs.djangoproject.com/ja/5.0/contents/
+- https://qiita.com/shun198/items/ee93c50eac2f7c77e443
+- https://qiita.com/tkmd35/items/9612c03dc60b1c516969

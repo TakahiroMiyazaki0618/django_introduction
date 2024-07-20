@@ -1,2 +1,6 @@
 django
 psycopg2-binary
+
+# 後から追加
+# django-allauth
+# django-bootstrap5
